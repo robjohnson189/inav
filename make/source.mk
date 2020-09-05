@@ -184,6 +184,8 @@ MAIN_SRC = \
             drivers/rangefinder/rangefinder_srf10.c \
             drivers/rangefinder/rangefinder_vl53l0x.c \
             drivers/rangefinder/rangefinder_virtual.c \
+            drivers/compass/compass_msp.c \
+            drivers/barometer/barometer_msp.c \
             drivers/opflow/opflow_fake.c \
             drivers/opflow/opflow_virtual.c \
             drivers/vtx_common.c \
