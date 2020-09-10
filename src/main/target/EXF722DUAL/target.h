@@ -125,7 +125,9 @@
 #define UART5_RX_PIN            PD2
 
 #define USE_SOFTSERIAL1
-#define USE_SOFTSERIAL2
+#define SOFTSERIAL_1_RX_PIN     PC8
+#define SOFTSERIAL_1_TX_PIN     PC9
+
 #define SERIAL_PORT_COUNT       8
 
 #define SERIALRX_UART           SERIAL_PORT_USART2
@@ -162,4 +164,6 @@
 /// found in others
 #define USE_TRANSPONDER
 #define USE_ESCSERIAL
+
+#define MAX_PWM_OUTPUT_PORTS        8
 // donoe found in others
