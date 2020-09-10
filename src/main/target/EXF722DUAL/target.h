@@ -46,7 +46,7 @@
 #define IMU_0_ALIGN             CW0_DEG
 #define IMU_1_ALIGN             CW90_DEG
 
-#define MPU6500_0_CS_PIN        PA4
+#define MPU6500_0_CS_PIN        PA15
 #define MPU6500_0_SPI_BUS       BUS_SPI1
 #define MPU6500_0_EXTI_PIN      PA8
 
