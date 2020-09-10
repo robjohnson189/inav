@@ -42,21 +42,22 @@
 #define SPI1_MISO_PIN           PA6
 #define SPI1_MOSI_PIN           PA7
 
-#define USE_SPI_DEVICE_2 // MAX7456
-#define SPI2_NSS_PIN            PB12
-#define SPI2_SCK_PIN            PB13
-#define SPI2_MISO_PIN           PB14
-#define SPI2_MOSI_PIN           PB15
+#define USE_DUAL_GYRO
+
+#define USE_IMU_MPU6500
+#define IMU_0_ALIGN             CW0_DEG
+#define IMU_1_ALIGN             CW90_DEG
+
+#define MPU6500_0_CS_PIN        PA4
+#define MPU6500_0_SPI_BUS       BUS_SPI1
+#define MPU6500_0_EXTI_PIN      PA8
+
+#define MPU6500_1_CS_PIN        PC3
+#define MPU6500_1_SPI_BUS       BUS_SPI1
+#define MPU6500_1_EXTI_PIN      PB2
 
 #define USE_EXTI
 #define USE_MPU_DATA_READY_SIGNAL
-
-#define USE_IMU_ICM20689
-#define IMU_ICM20689_ALIGN      CW0_DEG
-#define GYRO_INT_EXTI           PA8
-#define ICM20689_CS_PIN         PA4
-#define ICM20689_SPI_BUS        BUS_SPI1
-
 // *************** I2C/Baro/Mag *********************
 #define USE_I2C
 #define USE_I2C_DEVICE_2
@@ -64,6 +65,7 @@
 #define I2C2_SDA                PB11
 
 #define USE_BARO
+#define BARO_I2C_BUS            BUS_I2C1
 #define USE_BARO_BMP280
 
 #define USE_MAG
@@ -94,13 +96,16 @@
 #define M25P16_CS_PIN           PB9
 #define ENABLE_BLACKBOX_LOGGING_ON_SPIFLASH_BY_DEFAULT
 // *************** OSD *****************************
+#define USE_SPI_DEVICE_2 // MAX7456
+#define SPI2_NSS_PIN            PB12
+#define SPI2_SCK_PIN            PB13
+#define SPI2_MISO_PIN           PB14
+#define SPI2_MOSI_PIN           PB15
+
 #define USE_OSD
 #define USE_MAX7456
 #define MAX7456_SPI_BUS         BUS_SPI2
 #define MAX7456_CS_PIN          SPI2_NSS_PIN /// ??????????
-
-
-
 // *************** UART *****************************
 #define USE_VCP
 
@@ -166,4 +171,8 @@
 #define USE_ESCSERIAL
 
 #define MAX_PWM_OUTPUT_PORTS        8
+
+#define USE_DSHOT
+#define USE_ESC_SENSOR
+#define USE_SERIALSHOT
 // donoe found in others

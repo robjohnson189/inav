@@ -21,11 +21,17 @@
 #include <stdint.h>
 
 #include "platform.h"
-#include "drivers/io.h"
 
+#include "drivers/bus.h"
+#include "drivers/io.h"
+#include "drivers/pwm_mapping.h"
 #include "drivers/timer.h"
 #include "drivers/timer_def.h"
 #include "drivers/dma.h"
+
+// Board hardware definitions
+BUSDEV_REGISTER_SPI_TAG(busdev_imu0,    DEVHW_MPU6500,  MPU6500_0_SPI_BUS,  MPU6500_0_CS_PIN,   MPU6500_0_EXTI_PIN,     0,  DEVFLAGS_NONE,  IMU_0_ALIGN);
+BUSDEV_REGISTER_SPI_TAG(busdev_imu1,    DEVHW_MPU6500,  MPU6500_1_SPI_BUS,  MPU6500_1_CS_PIN,   MPU6500_1_EXTI_PIN,     1,  DEVFLAGS_NONE,  IMU_1_ALIGN);
 
 const timerHardware_t timerHardware[] = {
     //DEF_TIM(TIM5,  CH1, PA0,  TIM_USE_CAMERA_CONTROL, 0, 0),
