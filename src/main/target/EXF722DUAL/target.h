@@ -35,9 +35,7 @@
 #define USE_TARGET_IMU_HARDWARE_DESCRIPTORS ///IDKKKKKK
 
 #define USE_SPI
-
 #define USE_SPI_DEVICE_1 // 2 x MPU
-#define SPI1_NSS_PIN            PA15
 #define SPI1_SCK_PIN            PA5
 #define SPI1_MISO_PIN           PA6
 #define SPI1_MOSI_PIN           PA7
@@ -97,7 +95,6 @@
 #define ENABLE_BLACKBOX_LOGGING_ON_SPIFLASH_BY_DEFAULT
 // *************** OSD *****************************
 #define USE_SPI_DEVICE_2 // MAX7456
-#define SPI2_NSS_PIN            PB12
 #define SPI2_SCK_PIN            PB13
 #define SPI2_MISO_PIN           PB14
 #define SPI2_MOSI_PIN           PB15
@@ -105,7 +102,7 @@
 #define USE_OSD
 #define USE_MAX7456
 #define MAX7456_SPI_BUS         BUS_SPI2
-#define MAX7456_CS_PIN          SPI2_NSS_PIN /// ??????????
+#define MAX7456_CS_PIN          PB12 /// ??????????
 // *************** UART *****************************
 #define USE_VCP
 
@@ -129,11 +126,7 @@
 #define UART5_TX_PIN            PC12
 #define UART5_RX_PIN            PD2
 
-#define USE_SOFTSERIAL1
-#define SOFTSERIAL_1_RX_PIN     PC8
-#define SOFTSERIAL_1_TX_PIN     PC9
-
-#define SERIAL_PORT_COUNT       8
+#define SERIAL_PORT_COUNT       6
 
 #define SERIALRX_UART           SERIAL_PORT_USART2
 #define SERIALRX_PROVIDER       SERIALRX_SBUS
