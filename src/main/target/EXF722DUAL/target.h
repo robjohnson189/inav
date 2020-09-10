@@ -63,7 +63,7 @@
 #define I2C2_SDA                PB11
 
 #define USE_BARO
-#define BARO_I2C_BUS            BUS_I2C1
+#define BARO_I2C_BUS            BUS_I2C2
 #define USE_BARO_BMP280
 
 #define USE_MAG
