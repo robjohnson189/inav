@@ -26,6 +26,7 @@
 #include "drivers/io.h"
 #include "drivers/pwm_mapping.h"
 #include "drivers/timer.h"
+#include "drivers/sensor.h"
 #include "drivers/timer_def.h"
 #include "drivers/dma.h"
 
