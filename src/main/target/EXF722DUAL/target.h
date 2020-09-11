@@ -24,8 +24,6 @@
 
 #define USBD_PRODUCT_STRING     "EXF722DUAL"
 
-#define ENABLE_DSHOT_DMAR       DSHOT_DMAR_ON
-
 #define LED0                    PC4
 
 #define BEEPER                  PC15
@@ -82,17 +80,8 @@
 
 #define USE_RANGEFINDER
 #define RANGEFINDER_I2C_BUS     BUS_I2C2
-// *************** FLASH **************************
-#define USE_SPI_DEVICE_3 // FLASH
-#define SPI3_SCK_PIN            PB3
-#define SPI3_MISO_PIN           PB4
-#define SPI3_MOSI_PIN           PB5
 
-#define USE_FLASHFS
-#define USE_FLASH_M25P16
-#define M25P16_SPI_BUS          BUS_SPI3
-#define M25P16_CS_PIN           PB9
-#define ENABLE_BLACKBOX_LOGGING_ON_SPIFLASH_BY_DEFAULT
+#define PCA9685_I2C_BUS         BUS_I2C1
 // *************** OSD *****************************
 #define USE_SPI_DEVICE_2 // MAX7456
 #define SPI2_SCK_PIN            PB13
@@ -102,9 +91,23 @@
 #define USE_OSD
 #define USE_MAX7456
 #define MAX7456_SPI_BUS         BUS_SPI2
-#define MAX7456_CS_PIN          PB12 /// ??????????
+#define MAX7456_CS_PIN          PB12
+// *************** FLASH **************************
+#define USE_SPI_DEVICE_3 // FLASH
+#define SPI3_SCK_PIN            PB3
+#define SPI3_MISO_PIN           PB4
+#define SPI3_MOSI_PIN           PB5
+
+#define M25P16_SPI_BUS          BUS_SPI3
+#define M25P16_CS_PIN           PB9
+
+#define USE_FLASHFS
+#define USE_FLASH_M25P16
+#define ENABLE_BLACKBOX_LOGGING_ON_SPIFLASH_BY_DEFAULT
 // *************** UART *****************************
 #define USE_VCP
+#define VBUS_SENSING_PIN        PC5
+#define VBUS_SENSING_ENABLED
 
 #define USE_UART1
 #define UART1_TX_PIN            PA9
@@ -127,9 +130,6 @@
 #define UART5_RX_PIN            PD2
 
 #define SERIAL_PORT_COUNT       6
-
-#define SERIALRX_UART           SERIAL_PORT_USART2
-#define SERIALRX_PROVIDER       SERIALRX_SBUS
 // *************** PINIO ***************************
 #define USE_PINIO
 #define USE_PINIOBOX
@@ -146,26 +146,28 @@
 #define ADC_CHANNEL_2_PIN           PC1
 #define ADC_CHANNEL_3_PIN           PC0
 
-#define VBAT_ADC_CHANNEL            ADC_CHN_2
 #define CURRENT_METER_ADC_CHANNEL   ADC_CHN_1
+#define VBAT_ADC_CHANNEL            ADC_CHN_2
 #define RSSI_ADC_CHANNEL            ADC_CHN_3
+// *************** OTHERS *****************************
+#define SERIALRX_PROVIDER       SERIALRX_SBUS
+#define DEFAULT_RX_TYPE         RX_TYPE_SERIAL
+#define SERIALRX_UART           SERIAL_PORT_USART2
 
-#define DEFAULT_RX_FEATURE      FEATURE_RX_SERIAL
 #define DEFAULT_FEATURES        (FEATURE_TRANSPONDER | FEATURE_RSSI_ADC | FEATURE_TELEMETRY | FEATURE_OSD | FEATURE_LED_STRIP)
+
+#define USE_SERIAL_4WAY_BLHELI_INTERFACE
 
 #define TARGET_IO_PORTA         0xffff
 #define TARGET_IO_PORTB         0xffff
 #define TARGET_IO_PORTC         0xffff
 #define TARGET_IO_PORTD         (BIT(2))
-// *************************************************
 
-/// found in others
-#define USE_TRANSPONDER
-#define USE_ESCSERIAL
 
 #define MAX_PWM_OUTPUT_PORTS        8
 
 #define USE_DSHOT
 #define USE_ESC_SENSOR
 #define USE_SERIALSHOT
-// donoe found in others
+#define USE_TRANSPONDER
+#define USE_ESCSERIAL
