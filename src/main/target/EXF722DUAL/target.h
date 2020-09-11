@@ -117,9 +117,10 @@
 #define UART2_TX_PIN            PA2
 #define UART2_RX_PIN            PA3
 
-#define USE_UART3
-#define UART3_TX_PIN            PB10
-#define UART3_RX_PIN            PB11
+// PB10 and PB11 reserved for I2C
+//#define USE_UART3
+//#define UART3_TX_PIN            PB10
+//#define UART3_RX_PIN            PB11
 
 #define USE_UART4
 #define UART4_TX_PIN            PC10
@@ -129,7 +130,7 @@
 #define UART5_TX_PIN            PC12
 #define UART5_RX_PIN            PD2
 
-#define SERIAL_PORT_COUNT       6
+#define SERIAL_PORT_COUNT       5
 // *************** PINIO ***************************
 #define USE_PINIO
 #define USE_PINIOBOX
