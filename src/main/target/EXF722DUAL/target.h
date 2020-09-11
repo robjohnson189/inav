@@ -81,7 +81,7 @@
 #define USE_RANGEFINDER
 #define RANGEFINDER_I2C_BUS     BUS_I2C2
 
-#define PCA9685_I2C_BUS         BUS_I2C1
+#define PCA9685_I2C_BUS         BUS_I2C2
 // *************** OSD *****************************
 #define USE_SPI_DEVICE_2 // MAX7456
 #define SPI2_SCK_PIN            PB13
